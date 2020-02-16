@@ -1,0 +1,47 @@
+.navbar {
+  position: relative;
+  z-index: 5 !important;
+}
+.text-white {
+  color: #fff !important;
+}
+.text-white:hover {
+  color: #3ad29f !important;
+}
+.bg-header {
+  background: url(./img/bg-shape.png) no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.hello {
+  z-index: 8 !important;
+}
+.img-movie {
+  width: 17%;
+  transform: translate(370%, 85%);
+}
+.form-control {
+  width: 30%;
+  height: 2.8rem;
+  margin: 3% 0 0 27%;
+  border-radius: 1rem;
+}
+.btn-block {
+  width: 30%;
+  height: 2.8rem;
+  color: #3ad29f;
+  margin: 1% 0 0 27%;
+  border: 1px solid #3ad29f;
+  border-radius: 1rem;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #3ad29f;
+  border: none;
+}
+.container-fluid {
+  margin: 3% 0 0 -5%;
+}
