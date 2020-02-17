@@ -7,7 +7,7 @@ export default class Search_Movies extends Component {
   state = {
     input: "",
     key: "0a3c058c4cdcdc5d426aeffc8ab1c63e",
-    data: ""
+    data: []
   };
   onSubmit = e => {
     e.preventDefault();
@@ -16,7 +16,10 @@ export default class Search_Movies extends Component {
       `https://api.themoviedb.org/3/search/movie?api_key=${this.state.key}&query=${this.state.input}`
     )
       .then(res => res.json())
-      .then(data => this.setState((this.state.data = data)));
+      .then(data => {
+        console.log(data);
+        this.setState((this.setState.data = data));
+      });
   };
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -48,19 +51,19 @@ export default class Search_Movies extends Component {
           </form>
 
           <div id="main-card">
-            {this.state.data.map(item => {
-              <div class="card" style="width: 18rem;">
+            {this.state.data.map(item => (
+              <div class="card" style={{ width: "18rem" }}>
                 <img
                   src={item.results.poster_path}
                   class="card-img-top"
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">{item.rtesults.title}</h5>
+                  <h5 class="card-title">{item.results.title}</h5>
                   <p class="card-text">{item.results.overview}</p>
                 </div>
-              </div>;
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
