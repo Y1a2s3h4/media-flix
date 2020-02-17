@@ -6,9 +6,8 @@ function App() {
   return (
     <div className="main-container-wrapper">
       <LandingPage />
-      <div className="bg-header ">
-        <SearchMovies />
-      </div>
+      <div className="bg-header "></div>
+      <SearchMovies />
     </div>
   );
 }

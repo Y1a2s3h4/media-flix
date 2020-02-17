@@ -16,9 +16,11 @@ export default class Search_Movies extends Component {
       `https://api.themoviedb.org/3/search/movie?api_key=${this.state.key}&query=${this.state.input}`
     )
       .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        this.setState((this.setState.data = data));
+      .then(dataJson => {
+        // console.log(dataJson);
+        this.setState({ data: dataJson.results }, () => {
+          console.log(this.state);
+        });
       });
   };
   onChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -42,32 +44,36 @@ export default class Search_Movies extends Component {
               className="form-control"
               onChange={this.onChange}
             />
-            <button
-              onClick={this.onSubmit}
-              className="btn btn-outline-primary btn-block"
-            >
+            <button type="submit" className="btn btn-outline-primary btn-block">
               Search
             </button>
           </form>
 
           <div id="main-card">
-            {this.state.data.map(item => (
-              <div class="card" style={{ width: "18rem" }}>
-                <img
-                  src={item.results.poster_path}
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">{item.results.title}</h5>
-                  <p class="card-text">{item.results.overview}</p>
+            {this.state.data.map(item => {
+              return (
+                <div class="card mb-3" style={{ maxWidth: "35rem" }}>
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img
+                        src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">{item.title}</h5>
+                        <p class="card-text">{item.overview}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
     );
   }
 }
-// http://www.omdbapi.com/?t=parasite&plot=full&apikey=db78d6fa

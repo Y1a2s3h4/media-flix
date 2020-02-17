@@ -13,8 +13,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 110%;
 }
 .hello {
   z-index: 8 !important;
@@ -44,4 +44,15 @@
 }
 .container-fluid {
   margin: 3% 0 0 -5%;
+}
+.search__movie__wrapper {
+  position: relative;
+}
+#main-card {
+  position: absolute;
+  padding-left: 10rem;
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: 600px 600px 600px;
+  width: 550px;
 }
