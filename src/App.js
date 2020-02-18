@@ -1,15 +1,29 @@
 import React from "react";
-import SearchMovies from "./components/Search_Movies";
-import "./App.css";
+import Nav from "./components/Nav";
 import LandingPage from "./components/Landing_Page";
+import Movie from "./components/Movie";
+import TVshows from "./components/TVshows";
+import Popular from "./components/Popular";
+import Newreleases from "./components/Newreleases";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="main-container-wrapper">
-      <LandingPage />
-      <div className="bg-header "></div>
-      <SearchMovies />
-    </div>
+    <Router>
+      <div className="main-container-wrapper">
+        <Nav />
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/movies" component={Movie} />
+        <Route path="/tvshows" component={TVshows} />
+        <Route path="/popular" component={Popular} />
+        <Route path="/newreleases" component={Newreleases} />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+// <LandingPage />
+
+//<Route path="search_movies" component={SearchMovies} />

@@ -15,10 +15,9 @@
   left: 0;
   width: 100%;
   height: 110%;
+  z-index: -1 !important;
 }
-.hello {
-  z-index: 8 !important;
-}
+
 .img-movie {
   width: 17%;
   transform: translate(370%, 85%);
@@ -43,6 +42,7 @@
   border: none;
 }
 .container-fluid {
+  z-index: 10 !important;
   margin: 3% 0 0 -5%;
 }
 .search__movie__wrapper {
