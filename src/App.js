@@ -6,7 +6,7 @@ import TVshows from "./components/TVshows";
 import Popular from "./components/Popular";
 import Newreleases from "./components/Newreleases";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
     <Router>

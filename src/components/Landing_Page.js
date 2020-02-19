@@ -63,7 +63,12 @@ export default class Landing_Page extends Component {
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title">{item.title}</h5>
-                      <p class="card-text">{item.overview}</p>
+                      <p class="card-text">Release Date: {item.release_date}</p>
+                      <p class="card-text">Original Language: {item.original_language}</p>
+                      <p class="card-text">Ratings: {item.vote_average}</p>
+                      <button className="btn btn-outline-primary">
+                        More Info
+                      </button>
                     </div>
                   </div>
                 </div>

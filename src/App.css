@@ -2,11 +2,9 @@
   position: relative;
   z-index: 5 !important;
 }
-.text-white {
-  color: #fff !important;
-}
 .text-white:hover {
   color: #3ad29f !important;
+  text-decoration: none !important;
 }
 .bg-header {
   background: url(./img/bg-shape.png) no-repeat;
@@ -41,6 +39,11 @@
   background-color: #3ad29f;
   border: none;
 }
+/* div.card-body p {
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+} */
 .container-fluid {
   z-index: 10 !important;
   margin: 3% 0 0 -5%;
@@ -50,9 +53,9 @@
 }
 #main-card {
   position: absolute;
-  padding-left: 10rem;
   padding-top: 10rem;
+  padding-left: 1.3rem;
   display: grid;
-  grid-template-columns: 600px 600px 600px;
   width: 550px;
+  grid-template-columns: 650px 650px 650px;
 }

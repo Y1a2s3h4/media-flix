@@ -29,14 +29,14 @@ export default class Search_Movies extends Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
                 <Link to="/movies">
-                  <a className="nav-link text-white" href="#home">
+                  <a className="nav-link text-white" href="#movies">
                     Movies <span className="sr-only">(current)</span>
                   </a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/tvshows">
-                  <a className="nav-link text-white" href="#link">
+                  <a className="nav-link text-white" href="#tvshows">
                     T.V Shows
                   </a>
                 </Link>
@@ -55,12 +55,12 @@ export default class Search_Movies extends Component {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <Link to="/popular">
-                    <a className="dropdown-item" href="#action">
+                    <a className="dropdown-item" href="#popular">
                       Popular
                     </a>
                   </Link>
                   <Link to="/newreleases">
-                    <a className="dropdown-item" href="#anotheraction">
+                    <a className="dropdown-item" href="#newreleases">
                       New Releases
                     </a>
                   </Link>
