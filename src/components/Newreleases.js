@@ -44,6 +44,7 @@ export default function Newreleases() {
           </div>
         ))}
       </div>
+      <div className="bg-header "></div>
     </div>
   );
 }

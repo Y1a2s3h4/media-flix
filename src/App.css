@@ -2,6 +2,9 @@
   position: relative;
   z-index: 5 !important;
 }
+.bg-primary {
+  background: linear-gradient(110deg, #06bdd6, #0d58e1, #361ae7) !important;
+}
 .text-white:hover {
   color: #3ad29f !important;
   text-decoration: none !important;

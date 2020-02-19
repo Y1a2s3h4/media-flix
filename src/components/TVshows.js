@@ -48,6 +48,7 @@ export default function TVshows() {
 
           )}
       </div>
+      <div className="bg-header "></div>
     </div>
   );
 }

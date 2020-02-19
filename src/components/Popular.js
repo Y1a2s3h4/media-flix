@@ -46,6 +46,7 @@ export default function Popular() {
 
           )}
       </div>
+      <div className="bg-header "></div>
     </div>
   );
 }
