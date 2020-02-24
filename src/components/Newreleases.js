@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Newreleases() {
   useEffect(() => {
@@ -37,7 +38,12 @@ export default function Newreleases() {
                     Original Language: {item.original_language}
                   </p>
                   <p class="card-text">Ratings: {item.vote_average}</p>
-                  <button className="btn more-info btn-outline-primary">More Info</button>
+                  <Link
+                    to={`/${item.id}`}
+                    className="btn more-info btn-outline-primary"
+                  >
+                    More Info
+                  </Link>
                 </div>
               </div>
             </div>

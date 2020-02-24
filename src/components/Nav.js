@@ -35,7 +35,7 @@ export default class Search_Movies extends Component {
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/tvshows">
                   T.V Shows
-                  </Link>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -51,11 +51,11 @@ export default class Search_Movies extends Component {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <Link className="dropdown-item" to="/popular">
-                    Popular
-                    </Link>
+                    Popular Movies
+                  </Link>
                   <Link className="dropdown-item" to="/newreleases">
-                    New Releases
-                    </Link>
+                    New-Releases Movies
+                  </Link>
                 </div>
               </li>
             </ul>
