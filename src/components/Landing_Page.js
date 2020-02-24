@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import imgMovie from "../img/img-movie.svg";
 
@@ -16,7 +17,7 @@ export default class Landing_Page extends Component {
     )
       .then(res => res.json())
       .then(dataJson => {
-        // console.log(dataJson);
+        console.log(dataJson);
         this.setState({ data: dataJson.results }, () => {
           console.log(this.state);
         });
@@ -42,8 +43,9 @@ export default class Landing_Page extends Component {
               placeholder="Enter Movie Name "
               className="form-control"
               onChange={this.onChange}
+              required="True"
             />
-            <button type="submit" className="btn btn-outline-primary btn-block">
+            <button type="submit" className="btn search btn-outline-primary btn-block">
               Search
             </button>
           </form>
@@ -51,7 +53,7 @@ export default class Landing_Page extends Component {
         <div id="main-card">
           {this.state.data.map(item => {
             return (
-              <div class="card mb-3" style={{ maxWidth: "35rem" }}>
+              <div key={item.id} class="card mb-3" style={{ maxWidth: "35rem" }}>
                 <div class="row no-gutters">
                   <div class="col-md-4">
                     <img
@@ -66,9 +68,9 @@ export default class Landing_Page extends Component {
                       <p class="card-text">Release Date: {item.release_date}</p>
                       <p class="card-text">Original Language: {item.original_language}</p>
                       <p class="card-text">Ratings: {item.vote_average}</p>
-                      <button className="btn btn-outline-primary">
+                      <Link to={`/${item.id}`} className="btn more-info btn-outline-primary">
                         More Info
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

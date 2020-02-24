@@ -20,7 +20,7 @@ export default function Newreleases() {
       <h1>New Releases</h1>
       <div id="main-card">
         {data.map(item => (
-          <div class="card mb-3" style={{ maxWidth: "35rem" }}>
+          <div key={item.id} class="card mb-3" style={{ maxWidth: "35rem" }}>
             <div class="row no-gutters">
               <div class="col-md-4">
                 <img
@@ -37,7 +37,7 @@ export default function Newreleases() {
                     Original Language: {item.original_language}
                   </p>
                   <p class="card-text">Ratings: {item.vote_average}</p>
-                  <button className="btn btn-outline-primary">More Info</button>
+                  <button className="btn more-info btn-outline-primary">More Info</button>
                 </div>
               </div>
             </div>

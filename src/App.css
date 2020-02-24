@@ -37,10 +37,15 @@
   border: 1px solid #3ad29f;
   border-radius: 1rem;
 }
-.btn:hover {
+.search:hover {
   color: #fff;
   background-color: #3ad29f;
-  border: none;
+  border-color: #3ad29f;
+}
+.more-info:hover {
+  color: #fff;
+  background-color: #3ad29f;
+  border-color: #3ad29f;
 }
 /* div.card-body p {
   white-space: nowrap;
