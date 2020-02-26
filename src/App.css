@@ -62,6 +62,12 @@
   width: 550px;
   grid-template-columns: 650px 650px 650px;
 }
+.main-card {
+  width: 100%;
+  position: absolute;
+  padding-top: 10rem;
+  padding-left: 1.3rem;
+}
 
 .more__wrapper {
   margin-top: 6rem;
@@ -72,6 +78,9 @@
 .card-title {
   font-size: 1.7rem;
 }
+.title {
+  font-size: 1.2rem;
+}
 .card-text {
   font-size: 0.9rem;
 }
@@ -79,4 +88,14 @@
   font-size: 1.9rem;
   font-weight: 300;
   line-height: 1.2;
+}
+.c-title {
+  font-size: 2.8rem !important;
+  margin-top: 6rem !important;
+  font-weight: 300;
+  line-height: 1.2;
+  border-bottom: 2px solid #fff;
+}
+.c-marginTop {
+  margin-top: 5rem;
 }
