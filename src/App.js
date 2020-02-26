@@ -6,6 +6,7 @@ import TVshows from "./components/TVshows";
 import Popular from "./components/Popular";
 import Newreleases from "./components/Newreleases";
 import MoreInfo from "./components/More_Info";
+import MoreTvInfo from "./components/More_Tv_Info";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
@@ -16,9 +17,10 @@ function App() {
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/movies" component={Movie} />
-          <Route path="/tvshows" component={TVshows} />
+          <Route path="/tvshows" exact component={TVshows} />
           <Route path="/popular" component={Popular} />
           <Route path="/newreleases" component={Newreleases} />
+          <Route path="/tvshows/:id" component={MoreTvInfo} />
           <Route path="/:id" component={MoreInfo} />
         </Switch>
       </div>

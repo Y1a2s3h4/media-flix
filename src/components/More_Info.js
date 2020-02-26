@@ -17,11 +17,22 @@ export default function More_Info({ match }) {
   };
 
   return (
-    <div>
-      <h1>More Info...</h1>
-      <div id="main-card">
+    <div className="more__wrapper">
+      <center>
+        <h1
+          style={{ color: "white" }}
+          className="text-uppercase display-5 d-inline more__info"
+        >
+          More Info
+        </h1>
+      </center>
+      <div id="main__card">
         {
-          <div key={mData.id} class="card mb-3" style={{ maxWidth: "35rem" }}>
+          <div
+            key={mData.id}
+            class="card mb-3"
+            style={{ maxWidth: "50rem", margin: "3rem 0 0 33rem" }}
+          >
             <div class="row no-gutters">
               <div class="col-md-4">
                 <img
@@ -38,16 +49,14 @@ export default function More_Info({ match }) {
                     Original Language: {mData.original_language}
                   </p>
                   <p class="card-text">Ratings: {mData.vote_average}</p>
-                  <button className="btn more-info btn-outline-primary">
-                    More Info
-                  </button>
+                  <p class="card-text">Overview: {mData.overview}</p>
                 </div>
               </div>
             </div>
           </div>
         }
       </div>
-      <div className="bg-header "></div>
+      <div className="bg-header"></div>
     </div>
   );
 }

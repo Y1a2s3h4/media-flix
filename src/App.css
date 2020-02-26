@@ -47,11 +47,6 @@
   background-color: #3ad29f;
   border-color: #3ad29f;
 }
-/* div.card-body p {
-  white-space: nowrap;
-  text-overflow: ellipsis !important;
-  overflow: hidden !important;
-} */
 .container-fluid {
   z-index: 10 !important;
   margin: 3% 0 0 -5%;
@@ -66,4 +61,22 @@
   display: grid;
   width: 550px;
   grid-template-columns: 650px 650px 650px;
+}
+
+.more__wrapper {
+  margin-top: 6rem;
+}
+.more__info {
+  border-bottom: 2px solid #fff;
+}
+.card-title {
+  font-size: 1.7rem;
+}
+.card-text {
+  font-size: 0.9rem;
+}
+.display-5 {
+  font-size: 1.9rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
