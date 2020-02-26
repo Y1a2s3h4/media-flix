@@ -71,5 +71,3 @@ export default function More_Info({ match }) {
     </div>
   );
 }
-
-// https://api.themoviedb.org/3/tv/60735?api_key=0a3c058c4cdcdc5d426aeffc8ab1c63e&language=en-US
