@@ -7,7 +7,7 @@ export default function News() {
   const [news_data, setNData] = useState([]);
   const fetch_News = () => {
     fetch(
-      `http://newsapi.org/v2/top-headlines?country=in&apiKey=4f0ed34c2436488fbea43a2b2255489e&category=entertainment`
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=4f0ed34c2436488fbea43a2b2255489e&category=entertainment`
     )
       .then(res => res.json())
       .then(data => {
