@@ -20,9 +20,7 @@ export default function TVshows() {
   return (
     <div className="c-marginTop">
       <center>
-        <h1 className="text-white d-inline text-uppercase c-title">
-          T.V.Shows
-        </h1>
+        <h1 className="white d-inline text-uppercase c-title">T.V.Shows</h1>
         <div className="row main-card">
           {movie_data.map(item => (
             <div className="col-sm-12 col-md-6 col-lg-4">

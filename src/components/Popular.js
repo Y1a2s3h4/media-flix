@@ -19,7 +19,7 @@ export default function Popular() {
   return (
     <div className="c-marginTop">
       <center>
-        <h1 className="text-white d-inline text-uppercase c-title">
+        <h1 className="white d-inline text-uppercase c-title">
           Popular Movies
         </h1>
         <div className="row main-card">

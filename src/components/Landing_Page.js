@@ -56,7 +56,7 @@ export default class Landing_Page extends Component {
         <div className="row main-card">
           {this.state.data.map(item => {
             return (
-              <div className="col-sm-12 col-md-6 col-lg-4">
+              <div className="col-sm-12 col-md-6 col-lg-6">
                 <div
                   key={item.id}
                   class="card mb-3"

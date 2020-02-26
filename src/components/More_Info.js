@@ -28,34 +28,37 @@ export default function More_Info({ match }) {
       </center>
       <div id="main__card">
         {
-          <div
-            key={mData.id}
-            class="card mb-3"
-            style={{ maxWidth: "50rem", margin: "3rem 0 0 33rem" }}
-          >
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img
-                  src={`https://image.tmdb.org/t/p/original${mData.poster_path}`}
-                  class="card-img"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">{mData.title}</h5>
-                  <p class="card-text">Release Date: {mData.release_date}</p>
-                  <p class="card-text">
-                    Original Language: {mData.original_language}
-                  </p>
-                  <p class="card-text">Ratings: {mData.vote_average}</p>
-                  <p class="card-text">Overview: {mData.overview}</p>
+          <center>
+            <div
+              key={mData.id}
+              class="card mb-3"
+              style={{ maxWidth: "50rem", margin: "3rem 0 0 0rem" }}
+            >
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img
+                    src={`https://image.tmdb.org/t/p/original${mData.poster_path}`}
+                    class="card-img"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-left">
+                    <h5 class="card-title">{mData.title}</h5>
+                    <p class="card-text">Release Date: {mData.release_date}</p>
+                    <p class="card-text">
+                      Original Language: {mData.original_language}
+                    </p>
+                    <p class="card-text">Ratings: {mData.vote_average}</p>
+                    <p class="card-text">Overview: {mData.overview}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </center>
         }
       </div>
+
       <div className="bg-header"></div>
     </div>
   );

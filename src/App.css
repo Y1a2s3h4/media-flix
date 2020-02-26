@@ -99,3 +99,71 @@
 .c-marginTop {
   margin-top: 5rem;
 }
+.white {
+  color: white;
+}
+
+@media (max-width: 575px) {
+  .img-movie {
+    display: none;
+  }
+  .form-control {
+    width: 100%;
+    margin: 10% 0 0 6%;
+  }
+  .btn-block {
+    width: 100%;
+    margin: 5% 0 0 6%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .img-movie {
+    transform: translate(230%, 115%);
+    width: 30%;
+  }
+  .form-control {
+    width: 50%;
+    margin: 10% 0 0 16%;
+  }
+  .btn-block {
+    width: 50%;
+    margin: 5% 0 0 16%;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .card-text {
+    font-size: 0.6rem;
+  }
+  .more-info {
+    font-size: 0.6rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .img-movie {
+    transform: translate(230%, 115%);
+    width: 30%;
+  }
+  .form-control {
+    width: 50%;
+    margin: 10% 0 0 16%;
+  }
+  .btn-block {
+    width: 50%;
+    margin: 5% 0 0 16%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .img-movie {
+    transform: translate(165%, 40%);
+    width: 38%;
+  }
+  .form-control {
+    width: 50%;
+    margin: 0% 0 0 10%;
+  }
+  .btn-block {
+    width: 50%;
+    margin: 3% 0 0 10%;
+  }
+}
