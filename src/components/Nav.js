@@ -58,6 +58,11 @@ export default class Search_Movies extends Component {
                   </Link>
                 </div>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/news">
+                  News
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

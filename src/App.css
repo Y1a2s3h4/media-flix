@@ -167,3 +167,7 @@
     margin: 3% 0 0 10%;
   }
 }
+.news__card {
+  margin-top: 3rem;
+  /* width: 50%; */
+}
