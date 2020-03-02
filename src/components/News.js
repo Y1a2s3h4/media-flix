@@ -17,8 +17,8 @@ export default function News() {
   };
 
   return (
-    <div className="mt-5">
-      <center>
+    <div className="mt-5 bg-header">
+      <center className="mt-5">
         <h1 className="white c-title d-inline text-uppercase">
           Entertainment News
         </h1>
@@ -42,7 +42,7 @@ export default function News() {
           ))}
         </div>
       </div>
-      <div className="bg-header "></div>
+      <div className=""></div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import imgMovie from "../img/img-movie.svg";
+import imgMovie from "../img/undraw.svg";
 
 export default class Landing_Page extends Component {
   state = {
@@ -82,7 +82,7 @@ export default class Landing_Page extends Component {
                         <p class="card-text">Ratings: {item.vote_average}</p>
                         <Link
                           to={`/${item.id}`}
-                          className="btn more-info btn-outline-primary"
+                          className="btn more-info btn-primary"
                         >
                           More Info
                         </Link>

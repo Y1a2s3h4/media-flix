@@ -2,21 +2,13 @@
   position: relative;
   z-index: 5 !important;
 }
-.bg-primary {
-  background: linear-gradient(110deg, #06bdd6, #0d58e1, #361ae7) !important;
+.bg-dark {
+  background-color: #14e !important;
 }
+
 .text-white:hover {
   color: #3ad29f !important;
   text-decoration: none !important;
-}
-.bg-header {
-  background: url(./img/bg-shape.png) no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  z-index: -1 !important;
 }
 
 .img-movie {
@@ -37,10 +29,13 @@
   border: 1px solid #3ad29f;
   border-radius: 1rem;
 }
-.search:hover {
+.search {
   color: #fff;
   background-color: #3ad29f;
-  border-color: #3ad29f;
+}
+.search:hover {
+  color: #fff;
+  background-color: #3fbe94;
 }
 .more-info:hover {
   color: #fff;

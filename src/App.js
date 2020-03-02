@@ -9,6 +9,7 @@ import MoreInfo from "./components/More_Info";
 import MoreTvInfo from "./components/More_Tv_Info";
 import News from "./components/News";
 import "./App.css";
+import "../src/index.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
