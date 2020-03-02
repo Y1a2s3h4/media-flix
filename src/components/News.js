@@ -17,7 +17,7 @@ export default function News() {
   };
 
   return (
-    <div className="mt-5 bg-header">
+    <div className="marginTop-c">
       <center className="mt-5">
         <h1 className="white c-title d-inline text-uppercase">
           Entertainment News
@@ -27,11 +27,14 @@ export default function News() {
         <div className="row">
           {news_data.map(items => (
             <div className="col-md-6">
-              <div class="card h-auto news__card mb-4">
+              <div
+                class="card h-75 news__card mb-4"
+                style={{ boxShadow: "0 2px 30px rgba(0, 0, 0, .1)" }}
+              >
                 <div class="card-header">{items.source.name}</div>
                 <div class="card-body">
                   <blockquote class="blockquote mb-0">
-                    <p>{items.title}</p>
+                    <p style={{ fontSize: 16 }}>{items.title}</p>
                     <footer class="blockquote-footer">
                       <cite title="Source Title">{items.author}</cite>
                     </footer>

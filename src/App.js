@@ -8,6 +8,7 @@ import Newreleases from "./components/Newreleases";
 import MoreInfo from "./components/More_Info";
 import MoreTvInfo from "./components/More_Tv_Info";
 import News from "./components/News";
+import Preloader from "./components/Preloader";
 import "./App.css";
 import "../src/index.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <div className="main-container-wrapper">
+        {/* <Preloader /> */}
         <Nav />
         <Switch>
           <Route path="/" exact component={LandingPage} />

@@ -3,14 +3,18 @@
   z-index: 5 !important;
 }
 .bg-dark {
-  background-color: #14e !important;
+  background-color: #0059ff !important;
+  /* background: url(./img/bg-shape.png) no-repeat;
+  background-color: #fff !important; */
 }
 
 .text-white:hover {
   color: #3ad29f !important;
   text-decoration: none !important;
 }
-
+.marginTop-c {
+  margin-top: 10rem;
+}
 .img-movie {
   width: 17%;
   transform: translate(370%, 85%);
@@ -37,6 +41,7 @@
   color: #fff;
   background-color: #3fbe94;
 }
+
 .more-info:hover {
   color: #fff;
   background-color: #3ad29f;
@@ -97,7 +102,9 @@
 .white {
   color: white;
 }
-
+.h-75 {
+  height: 75% !important;
+}
 @media (max-width: 575px) {
   .img-movie {
     display: none;

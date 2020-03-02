@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import imgMovie from "../img/undraw.svg";
-
+import Loader from "../img/preview.gif";
+import Preloader from "./Preloader";
 export default class Landing_Page extends Component {
   state = {
     input: "",
     key: "0a3c058c4cdcdc5d426aeffc8ab1c63e",
-    data: []
+    data: [],
+    isLoading: true
   };
   onSubmit = e => {
     e.preventDefault();
@@ -24,6 +26,10 @@ export default class Landing_Page extends Component {
       });
   };
   onChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  componentDidMount() {
+    this.setState({ isLoading: false });
+  }
 
   render() {
     const { input } = this.state;
@@ -54,9 +60,10 @@ export default class Landing_Page extends Component {
           </form>
         </div>
         <div className="row main-card">
+          {this.state.isLoading && <Preloader />}
           {this.state.data.map(item => {
             return (
-              <div className="col-sm-12 col-md-6 col-lg-6">
+              <div className="col-sm-12 col-md-6 col-lg-4">
                 <div
                   key={item.id}
                   class="card mb-3"
@@ -82,7 +89,7 @@ export default class Landing_Page extends Component {
                         <p class="card-text">Ratings: {item.vote_average}</p>
                         <Link
                           to={`/${item.id}`}
-                          className="btn more-info btn-primary"
+                          className="btn more-info btn-outline-primary"
                         >
                           More Info
                         </Link>

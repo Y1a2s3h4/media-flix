@@ -6,7 +6,7 @@ import "../App.css";
 export default class Search_Movies extends Component {
   render() {
     return (
-      <nav className="navbar  navbar-expand-lg navbar-light bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container text-uppercase">
           <Link to="/">
             <a className="navbar-brand text-white" href="#home">
