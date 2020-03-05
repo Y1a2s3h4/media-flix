@@ -2,17 +2,19 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import imgMovie from "../img/undraw.svg";
-import Loader from "../img/preview.gif";
 import Preloader from "./Preloader";
 export default class Landing_Page extends Component {
   state = {
     input: "",
     key: "0a3c058c4cdcdc5d426aeffc8ab1c63e",
     data: [],
-    isLoading: true
+    isLoading: false
   };
   onSubmit = e => {
     e.preventDefault();
+    this.setState({ isLoading: true }, () => {
+      console.log(this.state);
+    });
     console.log(this.state.input);
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${this.state.key}&query=${this.state.input}`
@@ -20,16 +22,12 @@ export default class Landing_Page extends Component {
       .then(res => res.json())
       .then(dataJson => {
         console.log(dataJson);
-        this.setState({ data: dataJson.results }, () => {
+        this.setState({ data: dataJson.results, isLoading: false }, () => {
           console.log(this.state);
         });
       });
   };
   onChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  componentDidMount() {
-    this.setState({ isLoading: false });
-  }
 
   render() {
     const { input } = this.state;
@@ -37,9 +35,18 @@ export default class Landing_Page extends Component {
     return (
       <div className="Landing _wrapper">
         <div className="container-fluid">
+          <div className="heading">
+            <div className="heading__wrapper">
+              <h1 className="heading__h1">Welcome To Media Flix</h1>
+              <p className="heading__p">
+                Latest Movies Info At Your Finger Tips
+              </p>
+            </div>
+          </div>
           <div className="img__movie__wrapper">
             <img src={imgMovie} className="img-movie" alt="unDraw1" />
           </div>
+
           <form onSubmit={this.onSubmit}>
             <input
               type="text"
@@ -59,8 +66,8 @@ export default class Landing_Page extends Component {
             </button>
           </form>
         </div>
+        {this.state.isLoading && <Preloader />}
         <div className="row main-card">
-          {this.state.isLoading && <Preloader />}
           {this.state.data.map(item => {
             return (
               <div className="col-sm-12 col-md-6 col-lg-4">

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Preloader from "./Preloader";
 
 export default function Newreleases() {
   useEffect(() => {
     discover();
   }, []);
   const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(false);
   const discover = () => {
+    setLoading(true);
     fetch(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=0a3c058c4cdcdc5d426aeffc8ab1c63e&language=en-US&page=1`
     )
@@ -14,12 +17,14 @@ export default function Newreleases() {
       .then(data => {
         console.log(data.results);
         setData(data.results);
+        setLoading(false);
       });
   };
   return (
     <div className="c-marginTop">
       <center>
         <h1 className="white d-inline text-uppercase c-title">New Releases</h1>
+        {isLoading && <Preloader />}
         <div className="row main-card">
           {data.map(item => (
             <div className="col-sm-12 col-md-6 col-lg-4">

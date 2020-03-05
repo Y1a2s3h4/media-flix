@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import Preloader from "./Preloader";
 
 export default function News() {
   useEffect(() => {
     fetch_News();
   }, []);
   const [news_data, setNData] = useState([]);
+  const [isLoading, setLoading] = useState(false);
   const fetch_News = () => {
+    setLoading(true);
     fetch(
       `https://newsapi.org/v2/top-headlines?country=in&apiKey=4f0ed34c2436488fbea43a2b2255489e&category=entertainment`
     )
@@ -13,6 +16,7 @@ export default function News() {
       .then(data => {
         console.log(data);
         setNData(data.articles);
+        setLoading(false);
       });
   };
 
@@ -24,6 +28,7 @@ export default function News() {
         </h1>
       </center>
       <div className="container">
+        {isLoading && <Preloader />}
         <div className="row">
           {news_data.map(items => (
             <div className="col-md-6">

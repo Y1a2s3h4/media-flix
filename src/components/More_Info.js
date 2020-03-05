@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import Preloader from "./Preloader";
+
 export default function More_Info({ match }) {
   useEffect(() => {
     discover();
   }, []);
   const [mData, setMData] = useState([]);
+  const [isLoading, setLoading] = useState(false);
   const discover = () => {
+    setLoading(true);
     fetch(
       `https://api.themoviedb.org/3/movie/${match.params.id}?api_key=0a3c058c4cdcdc5d426aeffc8ab1c63e&language=en-US`
     )
@@ -13,6 +17,7 @@ export default function More_Info({ match }) {
       .then(data => {
         console.log(data);
         setMData(data);
+        setLoading(false);
       });
   };
 
@@ -28,6 +33,8 @@ export default function More_Info({ match }) {
       </center>
       <div className="container">
         <div id="main__card">
+          {isLoading && <Preloader />}
+
           {
             <center>
               <div

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import Preloader from "./Preloader";
+
 export default function More_Info({ match }) {
   useEffect(() => {
     discover();
